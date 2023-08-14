@@ -15,16 +15,26 @@
       font-family: Arial, sans-serif;
     }
 
+    /* Center header */
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
     /* Common section styles */
     .container {
       float: left;
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
+      position: relative;
     }
 
     /* Section title styles */
     .section-title-box {
+      position: absolute;
+      top: 0;
+      right: 0;
       background-color: #333; /* Dark gray */
       color: white;
       padding: 5px 10px;
@@ -69,15 +79,15 @@
     <h1>Our Menu</h1>
   </header>
   <div class="container">
-    <div class="section-title-box">Chicken</div>
+    <div class="section-title-box" style="background-color: #F00;">Chicken</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
   <div class="container">
-    <div class="section-title-box">Beef</div>
+    <div class="section-title-box" style="background-color: #0F0;">Beef</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
   <div class="container">
-    <div class="section-title-box">Sushi</div>
+    <div class="section-title-box" style="background-color: #00F;">Sushi</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 </body>
