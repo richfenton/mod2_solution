@@ -16,60 +16,50 @@
     }
 
     /* Common section styles */
-    .section {
-      border: 1px solid black;
+    .container {
+      float: left;
+      width: 100%;
       padding: 20px;
       box-sizing: border-box;
-      float: left;
-      width: 100%; /* Default to full width */
-      position: relative; /* Position for section titles */
-      margin: 10px; /* Add spacing between containers */
     }
 
     /* Section title styles */
-    .section-title {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+    .section-title-box {
+      background-color: #333; /* Dark gray */
       color: white;
       padding: 5px 10px;
       font-size: 14px;
     }
 
-    /* Header styles */
-    .header {
-      text-align: center;
-      padding: 20px;
-    }
-
     /* Container background colors */
-    .section:nth-child(1) {
-      background-color: #F00; /* Red */
+    .container:nth-child(1) {
+      background-color: #EFEFEF; /* Light gray */
     }
 
-    .section:nth-child(2) {
-      background-color: #0F0; /* Green */
+    .container:nth-child(2) {
+      background-color: #F9F9F9; /* Off-white */
     }
 
-    .section:nth-child(3) {
-      background-color: #00F; /* Blue */
+    .container:nth-child(3) {
+      background-color: #F5F5F5; /* Lighter gray */
     }
 
     /* Responsive layout */
     @media (min-width: 992px) {
-      .section {
+      .container {
         width: 33.33%;
       }
     }
 
     @media (min-width: 768px) and (max-width: 991px) {
-      .section {
+      .container {
         width: 50%;
-        clear: both; /* Start new row */
       }
-      .section:last-child {
+    }
+
+    @media (max-width: 767px) {
+      .container {
         width: 100%;
-        clear: none; /* Prevent clearing for the last section */
       }
     }
   </style>
@@ -78,18 +68,17 @@
   <header class="header">
     <h1>Our Menu</h1>
   </header>
-  <div class="section">
-    <h2 class="section-title">Chicken</h2>
+  <div class="container">
+    <div class="section-title-box">Chicken</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
-  <div class="section">
-    <h2 class="section-title">Beef</h2>
+  <div class="container">
+    <div class="section-title-box">Beef</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
-  <div class="section">
-    <h2 class="section-title">Sushi</h2>
+  <div class="container">
+    <div class="section-title-box">Sushi</div>
     <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 </body>
 </html>
-
