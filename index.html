@@ -24,10 +24,12 @@
     /* Common section styles */
     .container {
       float: left;
-      width: 100%;
+      width: calc(33.33% - 20px); /* To add spacing between containers */
+      margin: 10px; /* Spacing between containers */
       padding: 20px;
       box-sizing: border-box;
       position: relative;
+      background-color: #B0C4DE; /* Light blue background */
     }
 
     /* Section title styles */
@@ -41,27 +43,8 @@
       font-size: 14px;
     }
 
-    /* Container background colors */
-    .container:nth-child(1) {
-      background-color: #EFEFEF; /* Light gray */
-    }
-
-    .container:nth-child(2) {
-      background-color: #F9F9F9; /* Off-white */
-    }
-
-    .container:nth-child(3) {
-      background-color: #F5F5F5; /* Lighter gray */
-    }
-
     /* Responsive layout */
-    @media (min-width: 992px) {
-      .container {
-        width: 33.33%;
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (max-width: 991px) {
       .container {
         width: 50%;
       }
