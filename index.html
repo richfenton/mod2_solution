@@ -5,51 +5,61 @@
 <title>My First Assignment</title>
 <style>
 
-/********** Base styles **********/
-* {
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Common section styles */
+.section {
+  border: 1px solid black;
+  padding: 20px;
   box-sizing: border-box;
-}
-h1 {
-  margin-bottom: 15px;
-}
-
-
-
-h1 {text-align: center
+  float: left;
+  width: 100%; /* Default to full width */
+  position: relative; /* Position for section titles */
 }
 
-.col-lg-1 {
-    width: 25%;
-    border: 1px solid black;
-    background-color: #432189;
-    height: 150px;
-    display:inline-block;
-    font-family: Helvetica;
-    color: white;
-    text-align: right top;
-    
+/* Section title styles */
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #F00; /* Example color for section title */
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
-.col-lg-2 {
-    width: 25%;
-    border: 1px solid black;
-    background-color: #6578D1;
-    height: 150px;
-    display:inline-block;
-    font-family: Helvetica;
-    color: white;
+/* Header styles */
+.header {
+  text-align: center;
+  padding: 20px;
 }
 
-.col-lg-3 {
-    width: 25%;
-    border: 1px solid black;
-    background-color:#38B6FF;
-    height: 150px;
-    display: inline-block;
-    font-family: Helvetica;
-    color: white;
+/* Responsive layout */
+@media (min-width: 992px) {
+  .section {
+    width: 33.33%;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 50%;
+    clear: both; /* Start new row */
+  }
+  .section:last-child {
+    width: 100%;
+    clear: none; /* Prevent clearing for the last section */
+  }
+}
 </style>
 </head>
 <body>
